@@ -6,6 +6,11 @@ import { ContactUsComponent } from './component/modules/pages/contact-us/contact
 
 export const routes: Routes = [
   {
+    path: '',
+    pathMatch: 'full',
+    component: HomeComponent,
+  },
+  {
     path: 'project',
     component: ProjectListComponent,
   },
