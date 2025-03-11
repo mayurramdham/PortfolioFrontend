@@ -1,0 +1,55 @@
+<div class="home-container container py-5">
+  <div class="row align-items-center">
+    <!-- Left Column: Text Content -->
+    <div class="col-md-6">
+      <div class="content-left">
+        <h1 class="hero-title typewriter">{{ home.heroTitle }}</h1>
+        <p class="hero-subtitle">{{ home.heroSubtitle }}</p>
+        <p class="hero-description">{{ home.heroDescription }}</p>
+        <!-- Social Media Icons -->
+        <div class="social-links mt-3">
+          <a
+            href="{{ home.socialLinks.github }}"
+            target="_blank"
+            class="social-icon"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+          <a
+            href="{{ home.socialLinks.linkedin }}"
+            target="_blank"
+            class="social-icon"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a
+            href="{{ home.socialLinks.twitter }}"
+            target="_blank"
+            class="social-icon"
+          >
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a
+            href="{{ home.socialLinks.instagram }}"
+            target="_blank"
+            class="social-icon"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+        <!-- Download Resume Button -->
+        <a [href]="home.resumeUrl" class="btn btn-primary mt-4" download
+          >Download Resume</a
+        >
+      </div>
+    </div>
+    <!-- Right Column: Profile Image -->
+    <div class="col-md-6 text-center">
+      <img
+        src="../../../../../assets/images/profile-image-transperrant-Photoroom.png"
+        alt="Profile Image"
+        class="profile-img"
+      />
+    </div>
+  </div>
+</div>

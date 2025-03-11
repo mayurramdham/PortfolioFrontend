@@ -1,0 +1,28 @@
+.navbar {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #00ffff !important;
+}
+
+.navbar-nav .nav-link {
+  font-size: 1.1rem;
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #00ffff !important;
+}
+
+.navbar {
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar.hidden {
+  transform: translateY(-100%);
+}

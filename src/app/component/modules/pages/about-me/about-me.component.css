@@ -1,0 +1,206 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* About Container with Layered Background */
+.about-container {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background: #000;
+}
+
+/* Background Layer (Replace URL with your final image URL when available) */
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* Overlay Layer */
+.bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(15, 32, 39, 0.8),
+    rgba(32, 58, 67, 0.8),
+    rgba(44, 83, 100, 0.8)
+  );
+  z-index: 2;
+}
+
+/* Content Layer */
+.content {
+  position: relative;
+  z-index: 3;
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  animation: fadeIn 1.5s ease;
+}
+
+/* Hero Section */
+.hero {
+  margin-bottom: 40px;
+  animation: slideIn 1s ease-out;
+}
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.hero-subtitle {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #b3b3b3;
+}
+
+/* Profile Image */
+.profile-img {
+  width: 250px;
+  height: 250px;
+  border: 5px solid #00ffff;
+  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.5);
+  object-fit: cover;
+}
+
+/* Details Section */
+.details {
+  text-align: center;
+  margin-bottom: 40px;
+  animation: slideUp 1s ease;
+}
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+.details-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Skills Section */
+.skills {
+  text-align: center;
+  margin-bottom: 40px;
+  animation: slideUp 1s ease;
+}
+.skill-list .skill {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 8px 15px;
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+/* Timeline Section */
+.timeline {
+  animation: slideUp 1s ease;
+}
+.timeline-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff;
+}
+.timeline-item h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+.timeline-item p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+.timeline-year {
+  font-size: 0.9rem;
+  color: #00ffff;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.details-card {
+  background: linear-gradient(
+    135deg,
+    rgba(15, 32, 39, 0.7),
+    rgba(32, 58, 67, 0.7)
+  );
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  margin: 2rem auto;
+  max-width: 800px;
+  animation: slideUp 1s ease;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.details-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #dcdcdc;
+}
+
+/* Reuse the existing slideUp animation */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

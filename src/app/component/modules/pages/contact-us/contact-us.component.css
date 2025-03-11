@@ -1,0 +1,170 @@
+/* Contact Container with Layered Background */
+.contact-container {
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+  color: #fff;
+}
+
+/* Background Layers */
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+
+/* Content Layer */
+.content {
+  position: relative;
+  z-index: 3;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  animation: fadeIn 1.5s ease;
+}
+
+/* Section Title */
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+/* Contact Wrapper: Two-Column Layout Using Flexbox */
+.contact-wrapper {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Card Styles for Contact Form & Info */
+.contact-form-card,
+.contact-info-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  flex: 1 1 400px;
+  animation: slideUp 1s ease;
+}
+
+/* Contact Form Styling */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 1rem;
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #ccc;
+}
+.btn-custom {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  background-color: #00ffff;
+  color: #1a1a1a;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.btn-custom:hover {
+  background-color: #00cccc;
+  transform: translateY(-2px);
+}
+
+/* Contact Information Styling */
+.contact-info-card .info h5 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+.contact-info-card .info p {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: #ccc;
+}
+.contact-info-card .info i {
+  margin-right: 8px;
+  color: #00ffff;
+}
+.social-icons {
+  margin-top: 10px;
+}
+.social-icons a {
+  font-size: 1.5rem;
+  margin-right: 10px;
+  color: #ccc;
+  transition: color 0.3s, transform 0.3s;
+}
+.social-icons a:hover {
+  color: #00ffff;
+  transform: scale(1.1);
+}
+
+/* Responsive Map */
+.map-responsive {
+  margin-top: 20px;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+.map-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .contact-wrapper {
+    flex-direction: column;
+  }
+}
