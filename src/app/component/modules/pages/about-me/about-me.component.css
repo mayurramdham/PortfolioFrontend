@@ -204,3 +204,106 @@
     transform: translateY(0);
   }
 }
+
+/* Container for the Skills Section */
+.skills-section {
+  text-align: center;
+  margin: 40px 0;
+  animation: slideUp 1s ease;
+}
+
+/* Section Title Styling */
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+/* Skills Grid Layout */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Individual Skill Item */
+.skill-item {
+  width: 120px;
+  height: 120px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover Animation */
+.skill-item:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 255, 255, 0.3);
+}
+
+/* Icon Styling (Font Awesome Icons) */
+.skill-item i {
+  font-size: 3rem;
+  color: #00ffff;
+  transition: transform 0.3s ease;
+}
+.skill-item img {
+  font-size: 3rem;
+  color: #00ffff;
+  transition: transform 0.3s ease;
+}
+.skill-item-image {
+  font-size: 3rem;
+  color: #00ffff;
+
+  transition: transform 0.3s ease;
+}
+/* Custom Icon Images for .NET and ASP.NET Core */
+.skill-icon-custom {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+/* Skill Label Styling */
+.skill-item p {
+  margin-top: 8px;
+  font-size: 1rem;
+  color: #fff;
+}
+
+/* Slide Up Animation */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .skill-item {
+    width: 100px;
+    height: 100px;
+  }
+  .skill-item i,
+  .skill-icon-custom {
+    font-size: 2.5rem;
+    width: 40px;
+    height: 40px;
+  }
+  .skill-item p {
+    font-size: 0.9rem;
+  }
+}
