@@ -1,0 +1,103 @@
+/* Services Section Container */
+.services {
+  padding: 60px 20px;
+
+  color: #fff;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+/* Grid Layout for Service Cards */
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  padding: 0 20px;
+}
+
+/* Service Card Styling */
+.service-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
+  animation: slideUp 1s ease;
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 255, 255, 0.2);
+}
+
+/* Icon Styling */
+.icon-wrapper {
+  font-size: 3rem;
+  color: #00ffff;
+  margin-bottom: 15px;
+  animation: pulse 2s infinite;
+}
+
+/* Pulse Animation for Icons */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Service Card Title */
+.service-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Service Card Description */
+.service-card p {
+  font-size: 1rem;
+  color: #dcdcdc;
+  line-height: 1.5;
+}
+
+/* Slide Up Animation */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2.5rem;
+  }
+  .service-card {
+    max-width: 90%;
+  }
+  .icon-wrapper {
+    font-size: 2.5rem;
+  }
+}
