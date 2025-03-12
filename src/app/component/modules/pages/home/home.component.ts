@@ -16,10 +16,10 @@ export class HomeComponent {
       'Passionate about building innovative applications that solve real-world problems. Committed to continuous learning and growth in the tech industry.',
     resumeUrl: 'path/to/your-resume.pdf',
     socialLinks: {
-      github: 'https://github.com/your-github',
-      linkedin: 'https://linkedin.com/in/your-linkedin',
-      twitter: 'https://twitter.com/your-twitter',
-      instagram: 'https://instagram.com/your-instagram',
+      github: 'https://github.com/mayurramdham/',
+      linkedin: 'https://in.linkedin.com/in/mayurramdham02',
+      twitter: 'https://x.com/mayurramdham02?t=ZaflJXTR_ODjBlqzZpnFng&s=08',
+      instagram: 'https://in.linkedin.com/in/mayurramdham02',
     },
     profileImage: 'src/assets/images/profile-image.jpg',
   };
