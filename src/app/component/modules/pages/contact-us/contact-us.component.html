@@ -11,6 +11,7 @@
       <div class="contact-form-card">
         <form
           (ngSubmit)="onSubmit(contactForm)"
+          novalidate
           #contactForm="ngForm"
           class="contact-form"
         >
@@ -23,11 +24,19 @@
           />
           <input
             type="email"
+            placeholder="Email"
+            id="email"
             name="email"
-            placeholder="Your Email"
             ngModel
+            #email="ngModel"
             required
+            email
+            class="form-control"
           />
+          <div *ngIf="email.invalid && email.touched" class="text-danger">
+            <div *ngIf="email.errors">Email is required.</div>
+            <div *ngIf="email.errors">Please enter a valid email address.</div>
+          </div>
           <input
             type="text"
             name="subject"
@@ -42,10 +51,21 @@
             ngModel
             required
           ></textarea>
-          <button type="submit" class="btn-custom">Send Message</button>
+          <button
+            type="submit"
+            class="btn-custom"
+            [disabled]="contactForm.invalid"
+          >
+            Send Message
+          </button>
         </form>
       </div>
+      @if(loader) {
 
+      <div class="loader-overlay">
+        <div class="loader"></div>
+      </div>
+      }
       <!-- Right Column: Contact Info & Map Card -->
       <div class="contact-info-card">
         <div class="info">
