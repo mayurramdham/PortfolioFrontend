@@ -29,15 +29,15 @@ jobs:
       - name: Run Tests
         run: npm test -- --watch=false --browsers=ChromeHeadless
 
-      # Step 5: Build the Angular Project using npx to invoke the local Angular CLI
+      # Step 5: Build the Angular Project
       - name: Build Project
-        run: npx ng build --configuration production
+        run: npm run build   # <----- RUN CUSTOM BUILD SCRIPT
 
       # Step 6: Deploy to Netlify
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.2
         with:
-          publish-dir: ./dist/portfolio-frontend
+          publish-dir: ./dist/portfolio-frontend/browser
           production-branch: main
           github-token: ${{ secrets.GITHUB_TOKEN }}
           netlify-auth-token: ${{ secrets.NETLIFY_AUTH_TOKEN }}
