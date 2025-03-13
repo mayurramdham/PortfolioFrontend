@@ -74,7 +74,11 @@
             "karmaConfig": "./karma.conf.js",
             "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "tsconfig.spec.json",
-            "assets": ["src/favicon.ico", "src/assets", "src/_redirects"],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets",
+              { "input": "src", "glob": "_redirects", "output": "/" }
+            ],
             "styles": ["src/styles.css"],
             "scripts": []
           }
