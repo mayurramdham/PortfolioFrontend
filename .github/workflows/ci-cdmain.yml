@@ -29,10 +29,9 @@ jobs:
       - name: Run Tests
         run: npm test -- --watch=false --browsers=ChromeHeadless
 
-      # Step 5: Build the Angular Project
+      # Step 5: Build the Angular Project using npx to invoke the local Angular CLI
       - name: Build Project
-        run: ng build --configuration production
-
+        run: npx ng build --configuration production
 
       # Step 6: Deploy to Netlify
       - name: Deploy to Netlify
