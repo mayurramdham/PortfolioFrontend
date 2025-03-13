@@ -8,6 +8,9 @@ import { Observable } from 'rxjs';
 export class ContactService {
   constructor(private http: HttpClient) {}
   addContact(contact: any): Observable<any> {
-    return this.http.post('https://localhost:7059/api/Contact', contact);
+    return this.http.post(
+      'https://mayurportfolio-dhdpbqhud8hyewgy.centralindia-01.azurewebsites.net/api/Contact',
+      contact
+    );
   }
 }
