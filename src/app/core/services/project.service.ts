@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class ProjectService {
   private apiUrl =
-    'https://mayurportfolio-dhdpbqhud8hyewgy.centralindia-01.azurewebsites.net/api/Contacts';
+    'https://mayurportfolio-dhdpbqhud8hyewgy.centralindia-01.azurewebsites.net/api/Projects';
   constructor(private http: HttpClient) {}
   getProjects(): Observable<any> {
     return this.http.get(this.apiUrl);
