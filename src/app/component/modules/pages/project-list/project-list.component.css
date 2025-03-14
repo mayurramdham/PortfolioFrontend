@@ -2,14 +2,13 @@
 
 /* Hero Section - Original Simple Version */
 .hero {
+  border: 3px solid rgba(255, 255, 255, 0.2); /* light border for definition */
+  border-radius: 20px;
   text-align: center;
-  padding: 80px 20px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border-radius: 15px;
+  padding: 100px 40px; /* increased padding for a spacious look */
   margin: 40px auto;
   max-width: 900px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 15px 30px rgba(47, 74, 104, 0.6); /* deeper shadow for better contrast */
 }
 
 .hero-title {
@@ -73,6 +72,7 @@
   overflow: hidden;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .project-card:hover {

@@ -31,7 +31,7 @@ export class ContactUsComponent {
 
   onSubmit(form: any) {
     this.loader = true;
-    // Handle form submission (e.g., call your API)
+
     this.contactService.addContact(form.value).subscribe({
       next: (response) => {
         if (response.statusCode == 200) {
