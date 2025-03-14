@@ -14,7 +14,7 @@ export class HomeComponent {
     heroSubtitle: '.NET Full Stack Developer',
     heroDescription:
       'Passionate about building innovative applications that solve real-world problems. Committed to continuous learning and growth in the tech industry.',
-    resumeUrl: 'path/to/your-resume.pdf',
+    resumeUrl: 'assets/docs/Mayur_Ramdham.pdf',
     socialLinks: {
       github: 'https://github.com/mayurramdham/',
       linkedin: 'https://in.linkedin.com/in/mayurramdham02',
