@@ -63,9 +63,8 @@
 
 /* Profile Image Styling */
 .profile-img {
-  width: 400px;
+  width: 350px;
   height: 500px;
-
   animation: fadeInRight 1s ease-out;
 }
 
@@ -104,8 +103,22 @@
   .profile-img {
     margin-top: 20px;
   }
+  .hero-title.typewriter {
+    /* Adjust the animation duration and steps to suit mobile layout */
+    animation: typing-mobile 4s steps(25, end) forwards,
+      blink-caret 0.75s step-end infinite;
+    font-size: 1.6rem; /* Adjust font size if needed */
+  }
 }
 
+@keyframes typing-mobile {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  } /* Ensure 100% covers the full text on mobile */
+}
 .typewriter {
   overflow: hidden;
   border-right: 0.1em solid #00ffff;
