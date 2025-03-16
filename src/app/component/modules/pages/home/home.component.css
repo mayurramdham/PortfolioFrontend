@@ -63,9 +63,8 @@
 
 /* Profile Image Styling */
 .profile-img {
-  width: 400px;
+  width: 350px;
   height: 500px;
-
   animation: fadeInRight 1s ease-out;
 }
 
@@ -120,7 +119,8 @@
     width: 0;
   }
   to {
-    width: 100%;
+    width: 22ch;
+    font-size: 1.7rem;
   }
 }
 
